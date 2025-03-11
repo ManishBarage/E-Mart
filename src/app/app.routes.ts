@@ -17,11 +17,11 @@ import { HeaderComponent } from './shared/layouts/header/header.component';
 export const routes: Routes = [
     {
         path: "",
-        redirectTo: "/",
+        redirectTo: "home",
         pathMatch: "full"
     },
     {
-        path: "",
+        path: "home",
         component: HomeComponent
     },
     {
