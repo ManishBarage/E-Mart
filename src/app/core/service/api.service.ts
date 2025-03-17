@@ -36,3 +36,4 @@ export class ApiService {
     return this.http.delete(path).pipe(catchError(this.formatErrors))
   }
 }
+ 
