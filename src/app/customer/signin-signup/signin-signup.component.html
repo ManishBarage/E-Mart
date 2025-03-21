@@ -1,10 +1,10 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8" *ngIf="regForm">
             <div class="card shadow-lg border-0 rounded-3">
                 <div class="card-body p-4">
                     <h3 class="text-center mb-4">Registration Form</h3>
-                    <form>
+                    <form [formGroup] = "signUpForm" (ngSubmit)="onSubmitSignUp()">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Name</label>
@@ -93,7 +93,7 @@
                                 <label class="form-check-label" for="female">Female</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="Others" disabled>
+                                <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="Others" [disabled]="true">
                                 <label class="form-check-label" for="others">Other</label>
                             </div>
                         </div>
@@ -125,8 +125,48 @@
                             <button class="btn btn-primary btn-lg w-100">Register</button>
                         </div>
                     </form>
+
+                    <!--------------Login Form------------->
+                    <p class="text-center">Already have an account? <a routerLink="/sign-in">Login here</a></p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6" *ngIf="!regForm">
+                <div class="card shadow-lg border-0 rounded-3">
+                    <div class="card-body p-4">
+                        <h3 class="text-center mb-4">Login</h3>
+                        <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email" name="userEmail" [(ngModel)] ="signInFormValue.userEmail" #userEmail ="ngModel" required email/>
+                                </div>
+                                <div class="col-12">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" placeholder="Enter password" name="userPassword" [(ngModel)] = "signInFormValue.userPassword" #userPassword="ngModel" minlength="6" togglePassword/>
+                                </div>
+                            </div>
+    
+                            <div class="form-check mt-3">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+    
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary btn-lg w-100">Login</button>
+                            </div>
+                        </form>
+    
+                        <hr class="my-4">
+    
+                        <p class="text-center">Don't have an account? <a routerLink="/sign-up">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
 </div>

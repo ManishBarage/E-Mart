@@ -14,11 +14,11 @@ export class LoginSignupService {
   constructor(private http:HttpClient, private apiService:ApiService) { }
 
   authLogin(user_name : any, password:any):Observable<any>{
-    return this.apiService.get(this.login_url+'/user?email'+user_name+'&password='+password);
+    return this.apiService.get(this.login_url+'/user?email='+user_name+'&password='+password);
   }
 
   userRegister(user_det:any):Observable<any>{
-    return this.apiService.post(this.reg_url+'/user'+user_det);
+    return this.apiService.post(this.reg_url+'/user',user_det);
   }
 
   adminLogin(user_name : any, password : any):Observable<any>{
