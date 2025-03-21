@@ -13,6 +13,7 @@ import { BuyerDashboardComponent } from './customer/buyer/buyer-dashboard/buyer-
 import { CheckoutComponent } from './customer/buyer/checkout/checkout.component';
 import { PageNotFoundComponent } from './shared/layouts/page-not-found/page-not-found.component';
 import { HeaderComponent } from './shared/layouts/header/header.component';
+import { AdminAuthGuardLogin, AdminAuthGuardService, BuyerAuthGuardService, SellerAuthGuardService, SellerBuyerAuthGuardLogin } from './shared/services/auth-guard.service';
 
 export const routes: Routes = [
     {
@@ -35,6 +36,7 @@ export const routes: Routes = [
     //Admin
     {
         path: '',
+        canActivate:[AdminAuthGuardLogin],
         children: [
             {
                 path: "admin-login",
@@ -44,6 +46,7 @@ export const routes: Routes = [
     },
     {
         path: '',
+        canActivate:[AdminAuthGuardService],
         children: [
             {
                 path: "admin-dashboard",
@@ -60,7 +63,9 @@ export const routes: Routes = [
         ]
     },
     {
-        path: '', children: [
+        path: '', 
+        canActivate:[SellerBuyerAuthGuardLogin],
+        children: [
             { 
                 path: "sign-up", 
                 component: SigninSignupComponent
@@ -73,6 +78,7 @@ export const routes: Routes = [
     },
     {
         path:'',
+        canActivate:[SellerAuthGuardService],
         children:[
             {
                 path:"seller-dashboard",
@@ -86,6 +92,7 @@ export const routes: Routes = [
     },
     {
         path:'',
+        canActivate:[BuyerAuthGuardService],
         children:[
             {
                 path:"buyer-dashboard",
