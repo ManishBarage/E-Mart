@@ -6,7 +6,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Language
                 </a>
@@ -14,29 +14,29 @@
                   <li><a class="dropdown-item" href="#">English</a></li>
                   <li><a class="dropdown-item" href="#">Hindi</a></li>
                 </ul>
-            </li>
+            </li> -->
             <li class="nav-item">
             <a class="nav-link" href="#">Home</a>
             </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About Us</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/buyer-dashboard">Order B</a>
+          <li class="nav-item" *ngIf="user_role=='buyer'">
+            <a class="nav-link" routerLink="/buyer-dashboard">Order</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/all-order">All Order A</a>
+          <li class="nav-item" *ngIf="user_role=='admin'">
+            <a class="nav-link" routerLink="/all-order">All Order</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/seller/product">Product S</a>
+          <li class="nav-item" *ngIf="user_role=='seller'">
+            <a class="nav-link" routerLink="/seller/product">Product</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/admin/product">All Product A</a>
+          <li class="nav-item" *ngIf="user_role=='admin'">
+            <a class="nav-link" routerLink="/admin/product">All Product</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/admin/user">Users A</a>
+          <li class="nav-item" *ngIf="user_role=='admin'">
+            <a class="nav-link" routerLink="/admin/user">Users</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a class="nav-link" routerLink="/contact-us">Contact Us</a>
           </li>
         </ul>
@@ -44,7 +44,7 @@
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" *ngIf="!logged_in">
             <li class="nav-item">
                 <a class="nav-link" routerLink="/sign-in">Sign In</a>
             </li>
@@ -52,12 +52,12 @@
                 <a class="nav-link" routerLink="/sign-up">Sign Up</a>
             </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto" *ngIf="logged_in">
             <li class="nav-item">
                 <a class="nav-link sim-pointer" routerLink="/my-profile">My Profile</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link sim-pointer">Logout</a>
+                <a class="nav-link sim-pointer" (click) = "logout()">Logout</a>
             </li>
         </ul>
       </div>

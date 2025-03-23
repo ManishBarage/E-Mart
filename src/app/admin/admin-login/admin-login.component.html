@@ -1,1 +1,47 @@
-<p>admin-login works!</p>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg border-0 rounded-3" style="width: 100%; max-width: 400px;">
+        <div class="card-body p-4">
+            <h3 class="text-center mb-3">Admin Login</h3>
+            <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+                
+                <!-- Email Field -->
+                <div class="form-group mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                        <input type="email" name="userEmail" class="form-control" 
+                            [(ngModel)]="signInFormValue.userEmail" 
+                            #userEMail="ngModel" required>
+                    </div>
+                    <div *ngIf="userEMail.invalid && userEMail.touched" class="text-danger small mt-1">
+                        * Valid email is required
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="form-group mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-lock"></i>
+                        </span>
+                        <input type="password" minlength="5" name="userPassword" class="form-control"
+                            [(ngModel)]="signInFormValue.userPassword"
+                            #userPassword="ngModel" required>
+                    </div>
+                    <div *ngIf="userPassword.invalid && userPassword.touched" class="text-danger small mt-1">
+                        * Password must be at least 5 characters
+                    </div>
+                </div>
+
+                <!-- Login Button -->
+                <button class="btn btn-primary w-100" [disabled]="tf.form.invalid">
+                    <i class="bi bi-box-arrow-in-right"></i> Login
+                </button>
+
+            </form>
+        </div>
+    </div>
+</div>
