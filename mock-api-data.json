@@ -1,34 +1,6 @@
 {
   "user": [
     {
-      "name": "Ashish Mishra",
-      "mobNumber": "1234567891",
-      "age": 29,
-      "dob": "1995-05-12",
-      "email": "admin@gmail.com",
-      "password": "123456",
-      "address": {
-        "addLine1": "District Center",
-        "addLine2": "Janakpuri",
-        "city": "New Delhi",
-        "state": "Delhi",
-        "zipCode": "110052"
-      },
-      "language": [
-        "English",
-        "Hindi",
-        "Bhojpuri",
-        "Telgu",
-        "Kannad"
-      ],
-      "gender": "Male",
-      "aboutYou": "I am a programmer...",
-      "uploadPhoto": "ashish.png",
-      "agreetc": true,
-      "role": "admin",
-      "id": "1"
-    },
-    {
       "aboutYou": "HGHJBHMBMBNHTRTYRYgfhfjfjh",
       "age": 29,
       "agreetc": true,
@@ -40,7 +12,7 @@
         "addLine1": "876444654",
         "addLine2": "FFFFHFGHHGFH",
         "city": "GFHFHFFHG",
-        "state": "...",
+        "state": "MP",
         "zipCode": "86764664646"
       },
       "language": [
@@ -50,7 +22,7 @@
       "name": "TESTY CODEIZ",
       "password": "123456789",
       "uploadPhoto": "C:\\fakepath\\Angular 15 (29).png",
-      "role": "seller",
+      "role": "admin",
       "id": "2"
     },
     {
@@ -177,7 +149,56 @@
       ],
       "mobNumber": "01234567890",
       "name": "Manish",
+      "uploadPhoto": "C:\\fakepath\\Angular 17 Admin (3).png",
       "role": "seller"
+    },
+    {
+      "aboutYou": "nothing",
+      "age": 45,
+      "agreetc": true,
+      "dob": "2003-01-01",
+      "email": "demo@gmail.com",
+      "gender": "Male",
+      "address": {
+        "id": 0,
+        "addLine1": "somwhere",
+        "addLine2": "near about you",
+        "city": "kop",
+        "state": "Maharashtra",
+        "zipCode": "416211"
+      },
+      "language": [
+        "English"
+      ],
+      "mobNumber": "1234567890",
+      "name": "Demo",
+      "role": "buyer",
+      "uploadPhoto": "C:\\fakepath\\use case.png",
+      "id": "b5f3"
+    },
+    {
+      "id": "78a8",
+      "aboutYou": "sdfghjk",
+      "age": 12,
+      "agreetc": true,
+      "dob": "2025-02-26",
+      "email": "test@gmail.com",
+      "gender": "Female",
+      "address": {
+        "id": 0,
+        "addLine1": "hehe",
+        "addLine2": "hihi",
+        "city": "delhi",
+        "state": "UP",
+        "zipCode": "12345"
+      },
+      "language": [
+        "English"
+      ],
+      "mobNumber": "0987654321",
+      "name": "test",
+      "role": "admin",
+      "uploadPhoto": "C:\\fakepath\\class.png"
     }
   ],
   "products": [

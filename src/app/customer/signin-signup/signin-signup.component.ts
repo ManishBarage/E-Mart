@@ -91,7 +91,7 @@ export class SigninSignupComponent {
       name:this.user_reg_data.name,
       passsword:this.user_reg_data.passsword,
       role:this.user_reg_data.role,
-      uplaodPhoto:this.user_reg_data.uplaodPhoto
+      uploadPhoto:this.user_reg_data.uploadPhoto
 
     }
 

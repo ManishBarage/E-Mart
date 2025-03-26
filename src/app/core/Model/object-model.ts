@@ -1,7 +1,7 @@
 export class User{
     name! : string;
     passsword! : string;
-    uplaodPhoto! : string;
+    uploadPhoto! : string;
     role! : string;
     mobNumber! : string;
     address! : Address;
