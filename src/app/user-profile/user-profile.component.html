@@ -1,1 +1,125 @@
-<p>user-profile works!</p>
+<br>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <form [formGroup] = "userProfileForm" (ngSubmit) = "updateProfile()">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="mobile" class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-control" placeholder="Enter mobile number" formControlName="mobNumber">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="age" class="form-label">Age</label>
+                            <input type="number" class="form-control" placeholder="Enter your age" formControlName="age">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="dob" class="form-label">Date of Birth</label>
+                            <input type="date" class="form-control" formControlName="dob">
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" placeholder="abc@gmail.com" formControlName="email">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter password" formControlName="password">
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="Address1" class="form-label">Address Line 1</label>
+                            <input type="text" class="form-control" placeholder="1234 Main St" formControlName="addLine1">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Address2" class="form-label">Address Line 2</label>
+                            <input type="text" class="form-control" placeholder="Apartment, floor, etc." formControlName="addLine2">
+                        </div>
+                    </div>
+
+                    <div class="row g-3 mt-2">
+                        <div class="col-md-4">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" placeholder="Enter city" formControlName="city">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="state" class="form-label">State</label>
+                            <select id="inputState" class="form-select" formControlName="state">
+                                <option selected>Choose</option>
+                                <option>Maharashtra</option>
+                                <option>UP</option>
+                                <option>MP</option>
+                                <option>Gujrat</option>
+                                <option>Karnataka</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="zip" class="form-label">Zipcode</label>
+                            <input type="text" class="form-control" placeholder="Enter zipcode" formControlName="zipCode">
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <div class="mb-3">
+                        <label for="language" class="form-label">Preferred Language</label>
+                        <select multiple class="form-select" formControlName="language">
+                            <option>Marathi</option>
+                            <option>Hindi</option>
+                            <option>English</option>
+                            <option>Telugu</option>
+                            <option>Kannada</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="Male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="gender" formControlName="gender" value="Others" [disabled]="true">
+                            <label class="form-check-label" for="others">Other</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="somethingAboutYou" class="form-label">Tell us about yourself</label>
+                        <textarea class="form-control" rows="3" placeholder="Share a few words about you..." formControlName="aboutYou"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="uploadPhoto" class="form-label">Upload Your Profile Photo</label>
+                        <input type="file" class="form-control" formControlName="uploadPhoto">
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <!-- <button class="btn btn-primary btn-lg w-100" data-bs-dismiss="modal">Register</button> -->
+                        <button class="btn btn-primary btn-lg w-100">Update your profile</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
