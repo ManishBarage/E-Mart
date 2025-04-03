@@ -34,10 +34,10 @@
       "gender": "Male",
       "address": {
         "id": 0,
-        "addLine1": "new delho",
+        "addLine1": "new delhi",
         "addLine2": "wx -1520",
         "city": "delhi",
-        "state": "...",
+        "state": "UP",
         "zipCode": "325863558"
       },
       "language": [
@@ -369,10 +369,10 @@
       },
       "deliveryAddress": {
         "id": 0,
-        "addLine1": "new delho",
+        "addLine1": "new delhi",
         "addLine2": "wx -1520",
         "city": "delhi",
-        "state": "...",
+        "state": "UP",
         "zipCode": "325863558"
       },
       "contact": "83685222555",

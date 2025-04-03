@@ -16,7 +16,7 @@ import { setThrowInvalidWriteToSignalError } from '@angular/core/primitives/sign
 export class UserProfileComponent implements OnInit {
   userProfileForm!: FormGroup;
   userProfile: boolean = false;
-  user_id!: any;
+  user_id!: number;
   user_data: any;
   user_update_data: any;
   user_dto!: User;
@@ -27,8 +27,8 @@ export class UserProfileComponent implements OnInit {
   constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.user_id = (sessionStorage.getItem("user_session_id"));
-    console.log("Here",this.user_id);
+    this.user_id = Number(sessionStorage.getItem("user_session_id"));
+    // console.log("Here",this.user_id);
     this.userProfileForm = this.formBuilder.group({
       name: ['', Validators.required],
       mobNumber: ['', Validators.required],
