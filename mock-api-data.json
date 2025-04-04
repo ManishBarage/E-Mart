@@ -320,13 +320,13 @@
       "status": "inactive"
     },
     {
-      "id": "15",
-      "name": "Angular 17 tutorial",
-      "uploadPhoto": "https://ibb.co/d089hzh",
-      "productDesc": "This is an angular tutorial for beginners",
-      "mrp": "799",
-      "dp": "499",
-      "status": "publish"
+      "id": "0",
+      "name": "MuscleBlaze Biozyme Performance Whey, 2 kg (4.4 lb)",
+      "uploadPhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpvqo05Wd1gbQ_8vX0H9KhgyD4qgDFCGTg2A&s",
+      "productDesc": "1. 100% Clean & Pure Concentrate Whey: Made from premium whey sourced from USA and Europe, free from artificial colors, artificial flavors, added sugar, or preservatives.\n2. World's only Protein with U.S. Patented Enzymes: Featuring the innovative Enhanced Absorption Formula (EAF®), it delivers 50% higher protein absorption, optimizing muscle recovery and eliminating protein digestion challenges.",
+      "mrp": "6,198",
+      "dp": "5,199",
+      "status": "inactive"
     }
   ],
   "orders": [

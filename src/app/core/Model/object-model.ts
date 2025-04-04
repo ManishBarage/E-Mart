@@ -24,7 +24,7 @@ export class Address{
 }
 
 export class Product{
-    id! : number;
+    id! : any;
     name! : string;
     uploadPhoto! : string;
     productDesc! : string;
